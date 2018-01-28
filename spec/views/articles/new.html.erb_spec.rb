@@ -8,6 +8,5 @@ RSpec.describe "articles/new.html.erb", type: :view do
     click_button 'Create Article'
     expect(page).to have_current_path(article_path(Article.last))
     expect(page).to have_content("Content for title")
-
   end
 end

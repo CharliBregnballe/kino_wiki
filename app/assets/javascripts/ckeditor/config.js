@@ -4,9 +4,9 @@ CKEDITOR.editorConfig = function (config) {
   config.toolbar_mini = [
     ["Bold",  "Italic",  "Underline",  "Strike",  "-",  "Subscript",  "Superscript"],
   ];
-  config.toolbar = "advanced";
+  config.toolbar = "simple";
 
-
+  
   config.filebrowserBrowseUrl           = "/ckeditor/attachment_files"
   config.filebrowserFlashBrowseUrl      = "/ckeditor/attachment_files"
   config.filebrowserFlashUploadUrl      = "/ckeditor/attachment_files"

@@ -54,6 +54,7 @@ Rails.application.configure do
 
   config.paperclip_defaults = {
     storage: :s3,
+    s3_host_name: 's3.eu-central-1.amazonaws.com',
     s3_region: 'eu-central-1',
     bucket:'kino-wiki',
     s3_credentials: "#{Rails.root}/config/aws.yml"

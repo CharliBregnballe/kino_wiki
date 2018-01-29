@@ -91,6 +91,7 @@ Rails.application.configure do
 
   config.paperclip_defaults = {
         storage: :s3,
+        s3_host_name: 's3.eu-central-1.amazonaws.com',
         s3_credentials: {
           bucket: 'kino-wiki',
           access_key_id: ENV.fetch('AWS_ACCESS_KEY'),

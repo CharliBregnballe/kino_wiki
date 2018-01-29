@@ -57,5 +57,5 @@ Rails.application.configure do
     s3_region: 'eu-central-1',
     bucket:'kino-wiki',
     s3_credentials: "#{Rails.root}/config/aws.yml"
-  }
+    }
 end

@@ -55,4 +55,6 @@ Ckeditor.setup do |config|
   # Used when CKEditor CDN enabled
   # By default: "ckeditor/config.js"
   # config.js_config_url = 'ckeditor/config.js'
+  # config.assets_plugins = ['codesnippet','widget', 'dialog', 'dialogui', 'lineutils','clipboard', 'widgetselection', 'notification', 'toolbar', 'button'] 
+
 end

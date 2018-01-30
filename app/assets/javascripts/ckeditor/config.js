@@ -1,5 +1,7 @@
 CKEDITOR.editorConfig = function( config )
 {
+
+
   // Define changes to default configuration here. For example:
   // config.language = 'fr';
   // config.uiColor = '#AADC6E';
@@ -15,7 +17,7 @@ CKEDITOR.editorConfig = function( config )
 
   // The location of a script that handles file uploads.
   config.filebrowserUploadUrl = "/ckeditor/attachment_files";
-
+  
   config.allowedContent = true;
 
   // Toolbar groups configuration.
@@ -23,7 +25,7 @@ CKEDITOR.editorConfig = function( config )
     { name: 'document' },
     { name: 'clipboard', items: ['PasteFromWord', '-', 'Undo', 'Redo' ] },
     { name: 'editing', items: [ 'Find', 'Replace'] },
-    { name: 'forms', items: [ 'ImageButton' ] },
+    { name: 'forms', items: [ ] },
     { name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline' ] },
     { name: 'paragraph', items: [ 'NumberedList', 'BulletedList' ] },
     { name: 'links', items: [ 'Link', 'Unlink' ] },

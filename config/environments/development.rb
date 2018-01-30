@@ -59,4 +59,7 @@ Rails.application.configure do
     bucket:'kino-wiki',
     s3_credentials: "#{Rails.root}/config/aws.yml"
     }
+
+  # needed for devise
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

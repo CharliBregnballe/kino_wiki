@@ -36,7 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # Custom gems
 gem 'ckeditor', github: 'galetahub/ckeditor' #CKeditor gem for articles
 gem 'paperclip', '~> 5.2', '>= 5.2.1' # For image upload
-gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1' # for integration to aws s3
+gem 'devise', '~> 4.4', '>= 4.4.1' # Users 
 
 
 

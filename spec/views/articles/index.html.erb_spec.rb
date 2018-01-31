@@ -4,7 +4,7 @@ RSpec.describe "articles/index.html.erb", type: :view do
   department = Department.create!(title: "Sales")
   it 'is possible to see articles on index page' do 
     3.times do 
-      Article.create!(title: "Title of Article", body: "Body of article",)
+      Article.create!(title: "Title of Article", body: "Body of article", department_id: Department.first.id)
       visit ('/')
       expect(page).to have_content("Title of Article")
     end

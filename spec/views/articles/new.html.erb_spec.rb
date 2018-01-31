@@ -5,8 +5,10 @@ RSpec.describe "articles/new.html.erb", type: :view do
     visit 'articles/new'
     fill_in 'article[title]', with: 'Content for title'
     fill_in 'article[body]', with: 'Content for body'
+    find('#department_dropdown').find(:xpath, 'option[2]').select_option
     click_button 'Create Article'
     expect(page).to have_current_path(article_path(Article.last))
     expect(page).to have_content("Content for title")
   end
 end
+

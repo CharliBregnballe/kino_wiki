@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "articles/show.html.erb", type: :view do
   it "can be destroyed" do 
-    @article = Article.create!(title: "Article for deletion", body: "This article will be deleted")
+    @article = Article.create!(title: "Article for deletion", body: "This article will be deleted", department_id: Department.first.id)
     count = Article.count
     visit "articles/#{@article.id}"
     click_link "delete article"

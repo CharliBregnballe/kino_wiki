@@ -1,32 +1,35 @@
 <!-- Form login -->
-<div class="col-md-4 offset-md-4">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <p class="h5 text-center mb-4">Log in</p>
+<div class="login-form">
+    
+  <div class="col-md-4 offset-md-4">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <p class="h5 text-center mb-4">Log in</p>
 
-    <div class="md-form">
-      <i class="fa fa-envelope prefix"></i>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control validate" %>
-      <%= f.label :email %>
-    </div>
-
-    <div class="md-form">
-      <i class="fa fa-key prefix"></i>
-      <%= f.password_field :password, autocomplete: "off", class: 'form-control validate' %>
-      <%= f.label :password %>
-    </div>
-
-
-    <% if devise_mapping.rememberable? -%>
-      <div class="form-group">
-        <%= f.check_box :remember_me, class: 'fill-in' %>
-        <%= f.label :remember_me, class: 'form-check-input' %>
+      <div class="md-form">
+        <i class="fa fa-envelope prefix"></i>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control validate" %>
+        <%= f.label :email %>
       </div>
-    <% end -%>
 
-    <div class="text-center">
-      <%= f.submit "Log in", class:"btn btn-elegant" %>
-    </div>
+      <div class="md-form">
+        <i class="fa fa-key prefix"></i>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control validate' %>
+        <%= f.label :password %>
+      </div>
 
-  <% end %>
+  <!--
+      <% if devise_mapping.rememberable? -%>
+        <div class="form-group">
+          <%= f.check_box :remember_me, class: 'fill-in' %>
+          <%= f.label :remember_me, class: 'form-check-input' %>
+        </div>
+      <% end -%>
+  -->
+      <div class="text-center">
+        <%= f.submit "Log in", class:"btn btn-elegant" %>
+      </div>
+
+    <% end %>
+  </div>
 </div>
 <!-- Form login -->

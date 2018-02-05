@@ -1,7 +1,12 @@
-<h1><%= @article.title %></h1>
-<span class="badge badge-info"><%= @article.department.title %></span>
-<p><%= @article.body.html_safe %></p>
+<div class="container">
+  <div class="article-show">
+    <h1><%= @article.title %></h1>
+    <i>Created at <%= @article.created_at.strftime("%d/%m/%Y") %></i> - <i>By: Charli Bregnballe</i><br>
+    <span class="badge badge-info"><%= @article.department.title %></span>
+    <p><%= @article.body.html_safe %></p>
 
-<i>By: Charli Bregnballe</i><br>
-<%= link_to 'Delete Article', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-<%= link_to 'Edit Article', edit_article_path(@article), class: 'btn btn-warning' %>
+    <%= link_to 'Delete Article', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+    <%= link_to 'Edit Article', edit_article_path(@article), class: 'btn btn-warning' %>
+  </div>
+</div>
+

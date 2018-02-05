@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
     if params[:search].present?
       @articles = Article.search(params[:search])
     else
-      @articles = Article.all
+      @articles = []
     end
   end
 

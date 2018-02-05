@@ -11,14 +11,12 @@
   <div class="row">
     <% @articles.each do |article| %>
       <div class="col-lg-4 col-md-6 mb-r">
-        <div class="card">
-          
+        <div class="card">     
           <div class="card-body">
             <h5 class="card-title"><%= article.title %></h5>
             <h6 class="card-subtitle mb-2 text-muted"><%= article.department.title %></h6>
-            <p class="card-text"><%= truncate("article.body.html_safe", length: 50) %></p>
-            <%= link_to "Show", article_path(article), class: "card-link" %>
-            <a href="#" class="card-link">Another link</a>
+            <p class="card-text"><%= truncate(article.body.html_safe, length: 150) %></p>
+            <%= link_to "Show", article_path(article), class: "card-link" %>      
           </div>
         </div>
       </div>

@@ -42,6 +42,8 @@ gem 'bootstrap', '~> 4.0.0' # Bootstrap 4
 gem 'jquery-rails' # Needed for bootstrap
 gem 'pg_search', '~> 2.1', '>= 2.1.2' # PG search for postgresql
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3' # Font awesome for icons
+gem 'lockup' # Gem for password protecting site
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

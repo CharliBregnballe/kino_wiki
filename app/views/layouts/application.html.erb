@@ -13,11 +13,15 @@
     <%= render 'shared/nav' %>
     
     <div class="container-fluid">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+
+      <% flash.each do |key, value| %>
+          <div class="alert alert-info" id="flashmsg"><%= value %></div>
+      <% end %>
+      
       <%= yield %>      
     </div>
 
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js"></script>
+
 </html>

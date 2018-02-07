@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
   mount Ckeditor::Engine => '/ckeditor'
   resources :articles
+  resources :incidents
 
   authenticated :user do
     root to: 'articles#index', as: :authenticated_root

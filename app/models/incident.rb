@@ -1,6 +1,4 @@
 class Incident < ApplicationRecord
-  # Named scopes
-
 
   # Enum
   enum status: [:relevant, :pending, :fixed]

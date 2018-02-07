@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="article-show">
+    <h1><%= @incident.title %></h1>
+    <i>Created at <%= @incident.created_at.strftime("%d/%m/%Y") %></i> - <i>By: Charli Bregnballe</i><br>
+    <span class="badge badge-info"><%= @incident.status %></span>
+    <p><%= @incident.description %></p>
+    <p><%= @incident.solution %></p>
+
+    <%= link_to 'Delete incident', incident_path(@incident), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+    <%= link_to 'Edit incident', edit_incident_path(@incident), class: 'btn btn-warning' %>
+  </div>
+</div>
+

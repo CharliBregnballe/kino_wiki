@@ -15,6 +15,24 @@ class IncidentsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+
+    if @incident.update_attributes(incident_params)
+      flash[:success] = "Incident updated"
+      redirect_to @incident 
+    else
+      render :edit 
+    end
+  end
+
+  def destroy
+    @incident.destroy
+    redirect_to root_path
+  end
+
   private 
 
     def incident_params

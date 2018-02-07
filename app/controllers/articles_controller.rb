@@ -4,8 +4,10 @@ class ArticlesController < ApplicationController
   def index
     if params[:search].present?
       @articles = Article.search(params[:search])
+      @incidents = []
     else
       @articles = []
+      @incidents = Incident.all
     end
   end
 

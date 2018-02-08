@@ -1,7 +1,7 @@
 <div class="container">
   <div class="col-md-4 offset-md-4 search-form">
     <%= form_tag(articles_path, method: "get", class: "form-inline md-form form-sm") do %>
-      <%= text_field_tag :search, nil, placeholder: "Search articles", class: "form-control w-75 mr-3", type: "text" %>
+      <%= text_field_tag :search, nil, placeholder: "Search articles", class: "form-control w-75 mr-3", type: "text", autofocus: true %>
       <i class="fa fa-search active" aria-hidden="true">
       <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0", style: "display: none" %>
       </i>
@@ -25,19 +25,19 @@
 
   <div class="relevant-incidents">
     <div class="row">
-      <%= render @incidents.relevant %>
+      <%= render @incidents.relevant unless @incidents.empty? %>
     </div>
   </div>
 
   <div class="pending-incidents">
     <div class="row">
-      <%= render @incidents.pending %>
+      <%= render @incidents.pending unless @incidents.empty? %>
     </div>
   </div>
 
   <div class="fixed-incidents">
     <div class="row">
-      <%= render @incidents.fixed %>
+      <%= render @incidents.fixed unless @incidents.empty? %>
     </div>
   </div>
 </div>

@@ -43,6 +43,7 @@ gem 'jquery-rails' # Needed for bootstrap
 gem 'pg_search', '~> 2.1', '>= 2.1.2' # PG search for postgresql
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3' # Font awesome for icons
 gem 'lockup' # Gem for password protecting site
+gem 'friendly_id', '~> 5.2', '>= 5.2.3' # Friendly ID articles and incidents
 
 
 group :development, :test do

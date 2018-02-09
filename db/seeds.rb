@@ -1,4 +1,5 @@
 Article.destroy_all
+Incident.destroy_all
 User.destroy_all 
 Department.destroy_all
 

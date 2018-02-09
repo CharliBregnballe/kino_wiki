@@ -1,5 +1,7 @@
 class Incident < ApplicationRecord
-
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :finders]
+  
   # Enum
   enum status: [:relevant, :pending, :fixed]
 

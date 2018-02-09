@@ -1,9 +1,9 @@
 <div class="container">
   <div class="col-md-4 offset-md-4 search-form">
     <%= form_tag(articles_path, method: "get", class: "form-inline md-form form-sm") do %>
-      <%= text_field_tag :search, nil, placeholder: "Search articles", class: "form-control w-75 mr-3", type: "text", autofocus: true %>
+      <%= text_field_tag :search, nil, placeholder: "Søg efter artikler", class: "form-control w-75 mr-3", type: "text", autofocus: true %>
       <i class="fa fa-search active" aria-hidden="true">
-      <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0", style: "display: none" %>
+      <%= submit_tag "Søg", class: "btn btn-outline-success my-2 my-sm-0", style: "display: none" %>
       </i>
     <% end %>
   </div>
@@ -15,7 +15,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= article.title %></h5>
             <h6 class="card-subtitle mb-2 text-muted"><%= article.department.title %></h6>
-            <p class="card-text"><%= truncate(article.body.html_safe, length: 150) %></p>
+            <p class="card-text"><%= truncate(article.body, length: 150, escape: false) %></p>
             <%= link_to "Show", article_path(article), class: "card-link" %>      
           </div>
         </div>

@@ -1,3 +1,86 @@
-// Place all the styles related to the Incidents controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Cards styling */
+
+.card {
+  .card-body {
+
+    .card-title {
+      color: #343a40;
+    }
+    .card-subtitle {
+
+    }
+
+    .card-text {
+      
+    }
+  }
+  .card-footer {
+    background-color: #929fba;
+    padding: 0.75rem 1.25rem 0.2rem 1.25rem;
+    p {
+      color: white;
+      display: inline-block;
+    }
+    p:nth-child(2) {
+      padding-left: 1.9rem;
+    }
+    i {
+      padding-right: 5px;
+    }
+  }
+}
+
+
+.relevant-incidents {
+  .card {
+    border-top: 2px solid #dc3545 !important;
+    .card-body {
+      .card-title {
+
+      }
+      .card-subtitle {
+
+      }
+
+      .card-text {
+
+      }
+    }
+  }
+}
+
+.pending-incidents {
+  .card {
+    border-top: 2px solid #ffc107 !important;
+    .card-body {
+      .card-title {
+
+      }
+      .card-subtitle {
+
+      }
+
+      .card-text {
+        
+      }
+    }
+  }
+}
+
+.fixed-incidents {
+  .card {
+    border-top: 2px solid #28a745 !important;
+    .card-body {
+      .card-title {
+
+      }
+      .card-subtitle {
+
+      }
+
+      .card-text {
+        
+      }
+    }
+  }
+}

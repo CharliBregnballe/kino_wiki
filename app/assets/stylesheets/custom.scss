@@ -5,12 +5,42 @@
   padding-right: 0px;
 }
 
+/* home page */
+
+.search-form {
+  margin-bottom: 100px;
+}
+
+/* show page */
+
+.show-page {
+  margin-top: 30px;
+  p {
+    img {
+      max-height:100%;
+      object-fit: contain;
+    }
+  }
+}
+
+
+/* new page */
+
+.new-page {
+  margin-top: 30px;
+}
 
 // flash message
 
 #flashmsg {
   position: absolute;
   z-index: 10;
+}
+
+// Navbar
+
+.fa-home {
+  font-size: 25px;;
 }
 
 // this is for the user stylesheet.

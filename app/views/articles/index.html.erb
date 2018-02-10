@@ -8,36 +8,49 @@
     <% end %>
   </div>
 
+
   <div class="row">
     <% @articles.each do |article| %>
       <div class="col-lg-4 col-md-6 mb-r">
         <div class="card">     
           <div class="card-body">
-            <h5 class="card-title"><%= article.title %></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><%= article.department.title %></h6>
+            <%= link_to article_path(article) do %>
+              <h5 class="card-title text-center"><%= article.title %></h5>
+            <% end %>
             <p class="card-text"><%= truncate(article.body, length: 150, escape: false) %></p>
-            <%= link_to "Show", article_path(article), class: "card-link" %>      
+            <%= link_to "Læs mere >", article_path(article), class: "blue-text mt-1 d-flex flex-row-reverse" %>      
           </div>
+          <div class="card-footer">
+            <p class="card-text"><i class="fa fa-user"></i> <%= article.user.first_name %></p>
+            <p class="card-text"><i class="fa fa-clock-o"></i> <%= article.created_at.strftime("%b %d, %Y") %></p>
+            <p class="card-text pull-right"><i class="fa fa-tag"> </i> <%= article.department.title %></p>
+
+          </div>      
         </div>
       </div>
     <% end %>
   </div>
 
-  <div class="relevant-incidents">
-    <div class="row">
-      <%= render @incidents.relevant unless @incidents.empty? %>
-    </div>
-  </div>
+  <% unless @incidents.empty? %>
 
-  <div class="pending-incidents">
-    <div class="row">
-      <%= render @incidents.pending unless @incidents.empty? %>
-    </div>
-  </div>
+  <h4 class="text-center">Bruger fejl</h4>
 
-  <div class="fixed-incidents">
-    <div class="row">
-      <%= render @incidents.fixed unless @incidents.empty? %>
+    <div class="relevant-incidents">
+      <div class="row">
+        <%= render @incidents.relevant %>
+      </div>
+    </div>
+
+    <div class="pending-incidents">
+      <div class="row">
+        <%= render @incidents.pending %>
+      </div>
+    </div>
+
+    <div class="fixed-incidents">
+      <div class="row">
+        <%= render @incidents.fixed %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

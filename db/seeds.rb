@@ -121,3 +121,59 @@ Article.create(title: 'Test Driven Development',
   American software engineer Kent Beck, who is credited with having developed or "rediscovered"[1] the technique, stated in 2003 that TDD encourages simple designs and inspires confidence.[2]
   Test-driven development is related to the test-first programming concepts of extreme programming, begun in 1999,[3] but more recently has created more general interest in its own right.[4]
   Programmers also apply the concept to improving and debugging legacy code developed with older techniques.[5]', user_id: User.first.id, department_id: Department.second.id)
+
+
+
+Incident.create(title: 'Some random title',
+  description: 'Some random description where there is a problem',
+  solution: 'The solution is often very simple, but sometimes hard to implement',
+  status: :relevant,
+  user_id: User.last.id)
+
+Incident.create(title: 'Some random title',
+  description: 'Some random description where there is a problem',
+  solution: 'The solution is often very simple, but sometimes hard to implement',
+  status: :relevant,
+  user_id: User.last.id)
+
+Incident.create(title: 'Some random title',
+  description: 'Some random description where there is a problem',
+  solution: 'The solution is often very simple, but sometimes hard to implement',
+  status: :relevant,
+  user_id: User.last.id)
+
+Incident.create(title: 'Some random title',
+  description: 'Some random description where there is a problem',
+  solution: 'The solution is often very simple, but sometimes hard to implement',
+  status: :relevant,
+  user_id: User.last.id)
+
+Incident.create(title: 'Some random title',
+  description: 'Some random description where there is a problem',
+  solution: 'The solution is often very simple, but sometimes hard to implement',
+  status: :relevant,
+  user_id: User.last.id)
+
+Incident.create(title: 'Some random title',
+  description: 'Some random description where there is a problem',
+  solution: 'The solution is often very simple, but sometimes hard to implement',
+  status: :pending,
+  user_id: User.last.id)
+
+Incident.create(title: 'Some random title',
+  description: 'Some random description where there is a problem',
+  solution: 'The solution is often very simple, but sometimes hard to implement',
+  status: :pending,
+  user_id: User.last.id)
+
+Incident.create(title: 'Some random title',
+  description: 'Some random description where there is a problem',
+  solution: 'The solution is often very simple, but sometimes hard to implement',
+  status: :fixed,
+  user_id: User.last.id)
+
+Incident.create(title: 'Some random title',
+  description: 'Some random description where there is a problem',
+  solution: 'The solution is often very simple, but sometimes hard to implement',
+  status: :fixed,
+  user_id: User.last.id)

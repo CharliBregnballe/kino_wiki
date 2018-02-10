@@ -1,13 +1,14 @@
 <div class="container">
-  <div class="article-show">
+  <div class="show-page">
     <h1><%= @incident.title %></h1>
-    <i>Created at <%= @incident.created_at.strftime("%d/%m/%Y") %></i> - <i>By: Charli Bregnballe</i><br>
-    <span class="badge badge-info"><%= @incident.status %></span>
-    <p><%= @incident.description %></p>
-    <p><%= @incident.solution %></p>
+    <i><i class="fa fa-user"></i> <%= @incident.user.first_name %> - <i class="fa fa-clock-o"></i> <%= @incident.created_at.strftime("%b %d, %Y") %></i> <br>
+    <span class="badge badge-pill <%= incident_status_tag(@incident) %>"><%= @incident.status %></span>
+    <hr>
+    <p><strong>Beskrivelse: </strong><%= @incident.description %></p>
+    <p><strong>Løsning: </strong><%= @incident.solution %></p>
 
-    <%= link_to 'Delete incident', incident_path(@incident), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-    <%= link_to 'Edit incident', edit_incident_path(@incident), class: 'btn btn-warning' %>
+    <%= link_to 'Slet', incident_path(@incident), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+    <%= link_to 'Rediger', edit_incident_path(@incident), class: 'btn btn-warning' %>
   </div>
 </div>
 

@@ -11,7 +11,7 @@
     </div>
     <div class="card-footer">
       <p class="card-text"><i class="fa fa-user"></i> <%= incident.user.first_name %></p>
-      <p class="card-text"><i class="fa fa-clock-o"></i> <%= incident.created_at.strftime("%b %d, %Y") %></p>
+      <p class="card-text"><i class="fa fa-clock-o"></i> <%= incident.updated_at.strftime("%b %d, %Y") %></p>
       <p class="card-text pull-right"><span class="badge badge-pill <%= incident_status_tag(incident) %>"><%= incident.status %></span></p>
 
     </div>

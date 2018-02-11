@@ -1,5 +1,5 @@
 <%= form_with model: @incident do |f| %>
-
+  
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, id: :incident_title, class: 'form-control', autofocus: true %>
@@ -26,4 +26,5 @@
   <div class="actions">
     <%= f.submit "Submit", class: 'btn btn-primary' %>
   </div>
+  
 <% end %>

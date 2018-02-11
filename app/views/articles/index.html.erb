@@ -54,3 +54,16 @@
     </div>
   </div>
 <% end %>
+
+
+<h2>Top 10 artikler</h2>
+<% @top10.each do |q| %>
+  <%= q.title %><br>
+<% end %>
+
+<h2>Top contributers</h2>
+
+<% @top_contribuers.each do |user| %>
+  <%= user.first_name %>
+  <%= user.articles.count %><br>
+<% end %>

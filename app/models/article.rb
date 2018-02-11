@@ -12,10 +12,16 @@ class Article < ApplicationRecord
           }
         }
 
+  # Scopes
+  scope :popular_articles, -> { order(impressions_count: :desc).limit(10) }
+
   # Validations
   validates_presence_of :title, :body, :department_id, :user_id
   belongs_to :department
   belongs_to :user
+
+  # add impressionist
+  is_impressionable :counter_cache => true
 
   def to_param
     [title.parameterize].join("-")

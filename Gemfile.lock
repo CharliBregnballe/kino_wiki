@@ -631,6 +631,8 @@ GEM
       activesupport (>= 4.2.0)
     i18n (0.9.3)
       concurrent-ruby (~> 1.0)
+    impressionist (1.6.0)
+      nokogiri (~> 1)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -787,6 +789,7 @@ DEPENDENCIES
   devise (~> 4.4, >= 4.4.1)
   font-awesome-rails (~> 4.7, >= 4.7.0.3)
   friendly_id (~> 5.2, >= 5.2.3)
+  impressionist (~> 1.6)
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

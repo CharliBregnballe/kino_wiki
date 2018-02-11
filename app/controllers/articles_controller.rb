@@ -2,6 +2,9 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   
   def index
+    @top10 = Article.all.popular_articles
+    @top_contribuers = User.all.sort{|a,b| b.articles.count <=> a.articles.count }
+
     if params[:search].present?
       @articles = Article.search(params[:search])
       @incidents = []
@@ -12,6 +15,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    impressionist(@article, nil, {:unique => [:session_hash]})
   end
 
   def new
@@ -49,7 +53,7 @@ class ArticlesController < ApplicationController
   private 
 
     def article_params
-      params.require(:article).permit(:title, :body, :department_id, :user_id)
+      params.require(:article).permit(:title, :body, :department_id, :user_id, :impressions_count)
     end
 
     def set_article

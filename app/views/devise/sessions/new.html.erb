@@ -1,6 +1,7 @@
 <!-- Form login -->
 <div class="login-form-background">
-  <div class="col-lg-4 col-md-4 col-sm-10 col-xs-10 offset-md-4">
+  <div class="row justify-content-center">
+  <div class="col-10 col-sm-8 col-md-4">
     <div class="login-form">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <p class="h5 text-center mb-4">Log in</p>
@@ -31,6 +32,6 @@
 
       <% end %>
     </div>
-  </div>
+  </div></div>
 </div>
 <!-- Form login -->

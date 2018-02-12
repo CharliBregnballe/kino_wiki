@@ -38,6 +38,7 @@ class ArticlesController < ApplicationController
   def update
 
     if @article.update_attributes(article_params)
+      @article.user_id = current_user.id
       flash[:success] = "Article updated"
       redirect_to @article 
     else

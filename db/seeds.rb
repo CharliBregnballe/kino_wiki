@@ -4,9 +4,9 @@ User.destroy_all
 Department.destroy_all
 
 Department.create!(title: "IT")
-Department.create!(title: "Sales")
+Department.create!(title: "Salg")
 Department.create!(title: "Support")
-Department.create!(title: "Editors")
+Department.create!(title: "Redaktion")
 
 User.create!(email: "charli@kompjuter.dk", first_name: "Charli", last_name: "Bregnballe", department: Department.first, password: "Test12345", password_confirmation: "Test12345")
 
